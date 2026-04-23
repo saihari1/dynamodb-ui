@@ -1,0 +1,10 @@
+{
+  "name": "ddb-admin-ui",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "dynamodb-admin"
+  },
+  "dependencies": {
+    "dynamodb-admin": "^4.0.0"
+  }
+}

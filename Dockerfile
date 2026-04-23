@@ -1,11 +1,10 @@
-FROM node:18
+FROM node:18-buster-slim
 
 WORKDIR /app
 
 RUN npm install -g dynamodb-admin
 
-ENV DYNAMO_ENDPOINT=http://dynamodb-local.railway.internal:8000
-
 EXPOSE 8001
 
-CMD ["dynamodb-admin"]
+# Make sure the DYNAMO_ENDPOINT from Railway is used
+CMD ["sh", "-c", "dynamodb-admin"]

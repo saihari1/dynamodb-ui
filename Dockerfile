@@ -2,10 +2,8 @@ FROM node:18-buster-slim
 
 WORKDIR /app
 
-RUN npm install dynamodb-admin
-
-COPY server.js .
+RUN npm install -g dynamodb-admin
 
 EXPOSE 8001
 
-CMD ["node", "server.js"]
+CMD ["sh", "-c", "dynamodb-admin"]

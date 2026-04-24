@@ -1,0 +1,7 @@
+#!/bin/sh
+
+echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID"
+echo "AWS_REGION=$AWS_REGION"
+echo "DYNAMO_ENDPOINT=$DYNAMO_ENDPOINT"
+
+dynamodb-admin

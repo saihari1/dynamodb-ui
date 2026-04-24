@@ -6,4 +6,4 @@ RUN npm install -g dynamodb-admin
 
 EXPOSE 8001
 
-CMD ["sh", "-c", "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY AWS_REGION=$AWS_REGION DYNAMODB_ENDPOINT=$DYNAMODB_ENDPOINT dynamodb-admin"]
+CMD ["sh", "-c", "AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy AWS_REGION=us-east-1 DYNAMODB_ENDPOINT=http://shortline.proxy.rlwy.net:51951 dynamodb-admin"]

@@ -4,6 +4,9 @@ WORKDIR /app
 
 RUN npm install -g dynamodb-admin
 
+COPY start.sh .
+RUN chmod +x start.sh
+
 EXPOSE 8001
 
-CMD ["sh", "-c", "AWS_ACCESS_KEY_ID=dummy AWS_SECRET_ACCESS_KEY=dummy AWS_REGION=us-east-1 DYNAMODB_ENDPOINT=http://shortline.proxy.rlwy.net:51951 dynamodb-admin"]
+CMD ["./start.sh"]
